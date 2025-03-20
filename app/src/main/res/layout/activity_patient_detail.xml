@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:backgroundTint="@color/black"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient Details"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_gravity="center" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/dataContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="11"
+                android:padding="15dp">
+
+                <!-- Hospital ID -->
+                <TextView
+                    android:text="Hospital ID:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvHospitalId"
+                    style="@style/ValueStyle" />
+
+                <!-- Patient ID -->
+                <TextView
+                    android:text="Patient ID:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvPatientId"
+                    style="@style/ValueStyle" />
+
+                <!-- IPD Number -->
+                <TextView
+                    android:text="IPD Number:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvIpdNumber"
+                    style="@style/ValueStyle" />
+
+                <!-- OPD Number -->
+                <TextView
+                    android:text="OPD Number:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvOpdNumber"
+                    style="@style/ValueStyle" />
+
+                <!-- Patient Name -->
+                <TextView
+                    android:text="Patient Name:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvPatientName"
+                    style="@style/ValueStyle" />
+
+                <!-- Contact Number -->
+                <TextView
+                    android:text="Contact Number:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvContactNumber"
+                    style="@style/ValueStyle" />
+
+                <!-- Email ID -->
+                <TextView
+                    android:text="Email ID:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvEmail"
+                    style="@style/ValueStyle" />
+
+                <!-- Gender -->
+                <TextView
+                    android:text="Gender:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvGender"
+                    style="@style/ValueStyle" />
+
+                <!-- Age -->
+                <TextView
+                    android:text="Age:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvAge"
+                    style="@style/ValueStyle" />
+
+                <!-- DOB -->
+                <TextView
+                    android:text="Date of Birth:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvDob"
+                    style="@style/ValueStyle" />
+
+                <!-- Address -->
+                <TextView
+                    android:text="Address:"
+                    style="@style/LabelStyle" />
+                <TextView
+                    android:id="@+id/tvAddress"
+                    style="@style/ValueStyle"
+                    android:layout_width="0dp"
+                    android:textColor="@color/white"
+                    android:layout_columnSpan="1"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="3" />
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
